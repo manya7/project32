@@ -77,7 +77,9 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  if(backgroundImg){
+    background(backgroundImg);
+    }
 
   text("score:"+score,800,50) 
 
@@ -182,10 +184,10 @@ function keyPressed() {
 		console.log(hour)
 		
 		if (hour>=06&&hour<=19){
-			bg=background("lightBlue");
+			bg=background("blue");
 		}
 		else{
-		bg=background("blue");
+		bg=background("pink");
 		
 		}
 	}
